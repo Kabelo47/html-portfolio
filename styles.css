@@ -1,0 +1,764 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #3E2723; /* Dark brown color for the entire website */
+    color: #ffffff; /* White text for contrast */
+    line-height: 1.8; /* Slightly increased line height for better readability */
+}
+
+
+
+/* Header Styling */
+header {
+    background: #3E2723; /* Dark brown header */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    overflow: hidden;
+}
+
+header h1 {
+    font-family: 'Lora', serif; /* Using 'Lora' for headings */
+    margin-bottom: 10px;
+    font-size: 3rem; /* Larger font size for the main heading */
+    font-weight: 700;
+    color: #ffffff; /* White text for header */
+    letter-spacing: 1px; /* Slight spacing between letters */
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: #3E2723; /* Match your website color */
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #5D4037; /* Slightly lighter brown on hover */
+    transform: scale(1.05);
+}
+
+
+header p {
+    font-family: 'Roboto', sans-serif; /* Using 'Roboto' for subheading */
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text for header */
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(62, 39, 35, 0.8); /* Dark brown with transparency */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+    opacity: 1; /* Initially visible */
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+
+
+
+div{
+    scroll-snap-align: start;
+}
+
+h1, h2, h3 {
+    font-weight: 700; /* Bold for headings */
+}
+
+p {
+    font-weight: 400; /* Regular for paragraphs */
+}
+
+nav ul li a {
+    font-weight: 500; /* Medium for navigation links */
+}
+
+
+/* Image Section */
+#image {
+    text-align: center;
+    margin-top: 0%;
+}
+
+#grad_image {
+    width: 70%;
+    max-width: 400px;
+    height: auto;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 3px solid rgba(255, 255, 255, 0.2); /* Soft border */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#grad_image:hover {
+    transform: scale(1.05); /* Slightly scale up the image */
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4); /* Enhance the shadow */
+}
+
+/* Section Spacing */
+section {
+    margin-top: 70px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* General Section Styling */
+#about1 {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#about2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+    align-items: center; /* Vertically center the content */
+    justify-items: center; /* Center align both the left and right content */
+}
+
+
+
+/* Left Side (Image) Styling */
+#left_side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Create a 3D perspective for the image */
+}
+
+#grad1_img {
+    width: 85%; /* Make image take the full width of the container */
+    height: auto;
+    max-width: 300px; /* Control max image size */
+    border-radius: 10%;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #f0f0f0; /* Soft border around image */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transform: rotate(-10deg); /* Initially slanted to the right */
+    transition: all 0.5s ease; /* Smooth transition for hover effect */
+}
+
+#grad1_img:hover {
+    transform: rotate(0deg); /* Return to upright position on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+
+/* Right Side (Content) Styling */
+#right_side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+#card_container {
+    display: flex;
+    justify-content: space-between; /* Space out cards evenly */
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Space between cards and paragraph */
+    width: 100%; /* Ensure container is full width */
+}
+
+#card {
+    width: 30%; /* Each card takes up 30% of the container width */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(249, 247, 247, 0.391);
+    margin: 20px 0;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#card:hover {
+    transform: scale(1.05); /* Scale up card slightly */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+#card img {
+    width: 100%;
+    height: auto;
+}
+
+#card h2 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    #card_container {
+        flex-direction: column; /* Stacks cards on smaller screens */
+        align-items: center;
+    }
+
+    #card {
+        width: 90%; /* Makes the cards smaller for mobile */
+    }
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 0.9rem;
+    line-height: 1.8; /* Improve readability */
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+/* Mobile Responsiveness for Typography */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Make links smaller for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #card {
+        width: 100%; /* Cards take up full width on very small screens */
+    }
+}
+
+
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+/* Experience Section Container */
+#experience {
+    padding: 40px 20px;
+    background-color: #3E2723; /* Or your chosen background */
+    color: #fff;
+    text-align: center;
+  }
+  
+  #experience h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  /* Flex container to hold the cards side by side */
+  .experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Card styling for each section */
+  .exp-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%; /* Approximately half on desktop */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 20px; /* Extra margin for stacking on small screens */
+  }
+  
+  /* Center align headings in cards */
+  .exp-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+ /* Ensure the list itself is left-aligned */
+.exp-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two columns */
+    gap: 10px;
+    text-align: left;  /* This makes all content inside the list left-aligned */
+  }
+  
+  /* Additionally, for each list item */
+  .exp-card ul li {
+    padding: 8px 0 8px 30px; /* extra left padding for the check mark */
+    position: relative;
+    text-align: left; /* explicitly align each list item to the left */
+  }
+  
+  /* Add Font Awesome check mark before each list item */
+  .exp-card ul li::before {
+    font-family: "Font Awesome 5 Free";  /* Ensure this matches your version */
+    font-weight: 900;                    /* Solid style */
+    content: "\f00c";                    /* Unicode for the check mark icon */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;                         /* Icon color */
+    font-size: 14px;                     /* Adjust size as needed */
+  }
+  
+  /* Styling for list items */
+  /*.exp-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }*/
+  /* Updated styling for list items in experience cards (without bottom border) */
+
+  .exp-card ul li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Hover effect for card */
+  .exp-card:hover {
+    background-color: #3E2723; /* Change to website background color on hover */
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.03);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .exp-card {
+      width: 90%; /* Stack cards on smaller screens */
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+/* Flex container for tables */
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Table card styling */
+.custom-card {
+    flex: 1;
+    min-width: 320px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hover effect */
+.custom-card:hover {
+    background-color: #3E2723; /* Matches website background */
+    transform: scale(1.05);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Table inside the card */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Table row styling */
+.custom-table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Table icons */
+.icon {
+    font-size: 24px;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+/* Overall Certifications & Education Section */
+#certifications {
+    padding: 40px 20px;
+    background-color: #3E2723; /* or your site's background */
+    color: #fff;
+    text-align: center;
+  }
+  
+  #certifications h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  /* Container for the cards */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: rgba(255, 255, 255, 0.1); /* light, transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%; /* approximately half the width on desktop */
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: #3E2723; /* hover effect: change background to match website color */
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.03);
+  }
+  
+  /* Card Heading Styling */
+  .card h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  /* Table Styling */
+  .card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .card th,
+  .card td {
+    padding: 10px;
+    text-align: left; /* Center-align both header and data */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .card th {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+  }
+  
+  .card tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+
+
+.portfolio-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    background: #1e1e1e;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #3E2723; /* Same as the website's main color */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Keep border visible */
+}
+
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+
+/* Full-screen under construction section */
+.under-construction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3E2723, #5D4037);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Content styling */
+  .under-construction-content {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Animated icon styling */
+  .under-construction i {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: rotate 3s linear infinite;
+  }
+  
+  /* Heading styling */
+  .under-construction h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph styling */
+  .under-construction p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Rotate animation for the icon */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Fade-in animation for the content */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+
+
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #3E2723; /* Match website theme */
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* Left Side: Social Media Boxes */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Social Box Design */
+.social-box {
+    background: rgba(255, 255, 255, 0.2); /* Light transparent */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    transition: background 0.3s;
+    border: 2px solid transparent;
+}
+
+/* Hover effect */
+.social-box:hover {
+    background: #3E2723; /* Match website theme */
+    border: 2px solid white;
+}
+
+/* Social Icons */
+.social-box i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Name Styling */
+.social-name {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Social Link */
+.social-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #D7CCC8; /* Lighter color on hover */
+}
+
+/* Right Side: Contact Form */
+.contact-right {
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input & Textarea Styling */
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    resize: none;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* Hover effect (same as tables) */
+.contact-right input:hover,
+.contact-right textarea:hover {
+    background: #3E2723;
+    border: 2px solid white;
+}
+
+/* Button Styling */
+.contact-right button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, border 0.3s;
+}
+
+.contact-right button:hover {
+    background-color: #3E2723;
+    border: 2px solid white;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
